@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("../img/background-sticky-note.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+input,
+textarea {
+  outline: none;
+  resize: none;
+}
+
+.notes-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 0;
+}
+
+.app-header__title {
+  margin: 10px 20px 0px;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.app-header__controls {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 0 10px;
+}
+
+.search,
+.add-new {
+  font-size: 14px;
+  padding: 5px;
+  margin: 8px;
+}
+
+.search {
+  flex-grow: 1;
+  max-width: 300px;
+  padding: 7px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.search::placeholder {
+  color: white;
+  font-style: italic;
+}
+
+.add-new {
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 8px;
+  font-weight: bolder;
+  background-color: #b7cefe;
+  outline: none;
+  border: none;
+  color: white;
+}
+
+.add-new:hover {
+  background-color: #b7fee7;
+}
+
+.note {
+  font-family: "Permanent Marker", cursive;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-color: #b7fee7;
+  border: 1px solid grey;
+  box-shadow: 5px 8px 15px rgb(138, 136, 136);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.note__title,
+.note__description {
+  font-family: "Permanent Marker", cursive;
+  width: 100%;
+  padding: 8px 14px;
+  background: transparent;
+  border: none;
+}
+
+.note__title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.note__description {
+  flex-grow: 1;
+  font-size: 14px;
+}
+
+.note__delete {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 20px;
+  color: lightgrey;
+  padding: 5px;
+}
+
+.note__delete:hover {
+  color: black;
+  cursor: pointer;
+}
